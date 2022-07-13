@@ -51,3 +51,20 @@ body {
 	width: min(85%, 54rem);
 	margin: auto;
 }
+
+input,
+button {
+	font: inherit;
+	border: 0;
+	background: transparent;
+}
+
+input:focus,
+button:focus {
+	outline: 0;
+}
+
+button {
+	display: flex;
+	user-select: none;
+}
