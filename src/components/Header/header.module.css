@@ -1,0 +1,15 @@
+.card {
+	background: transparent;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.9rem 2rem;
+	gap: 2rem;
+}
+
+header.card h1 {
+	color: var(--clr-white);
+	letter-spacing: 1.3rem;
+	font-weight: 700;
+	font-size: calc(var(--base-font) * 2);
+}
