@@ -68,3 +68,7 @@ button {
 	display: flex;
 	user-select: none;
 }
+
+.d-none {
+	display: none;
+}
