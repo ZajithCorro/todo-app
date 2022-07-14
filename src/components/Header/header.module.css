@@ -2,8 +2,8 @@
 	background: transparent;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	padding: 1.9rem 2rem;
+	align-items: flex-start;
+	padding: 0;
 	gap: 2rem;
 }
 
