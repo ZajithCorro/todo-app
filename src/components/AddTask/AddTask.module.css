@@ -1,4 +1,4 @@
-.add_task {
+.addTask {
 	background-color: var(--clr-card-bg);
 	display: flex;
 	justify-content: space-between;
@@ -9,7 +9,7 @@
 	border-radius: 0.5rem;
 }
 
-.button_add {
+.btnAddTaskContainer {
 	width: 2.5rem;
 	height: 2.5rem;
 	border: 0.1rem solid var(--clr-gb-5);
@@ -21,11 +21,11 @@
 	transition: background 0.3s ease;
 }
 
-.button_add:hover {
+.btnAddTaskContainer:hover {
 	background: var(--clr-blue);
 }
 
-.btn {
+.btnAddTask {
 	color: var(--clr-gb-2);
 	font-size: var(--base-font);
 	transition: color 0.3s ease;
@@ -35,17 +35,17 @@
 	justify-content: center;
 }
 
-.input_container {
+.inputAddTaskContainer {
 	flex: 1;
 }
 
-.input {
+.inputAddTask {
 	width: 100%;
 	padding: 0.7rem 0;
 	color: var(--clr-gb-1);
 }
 
-.input::placeholder {
+.inputAddTask::placeholder {
 	color: var(--clr-gb-5);
 	font-weight: var(--fw-normal);
 }
