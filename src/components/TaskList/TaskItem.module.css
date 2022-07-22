@@ -51,6 +51,11 @@
 	color: var(--clr-gb-2);
 }
 
+.taskCompleted {
+	text-decoration: line-through;
+	color: var(--clr-gb-2);
+}
+
 .btnClear {
 	cursor: pointer;
 	opacity: 0;
