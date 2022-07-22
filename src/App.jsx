@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import AddTask from './components/AddTask';
 import TaskList from './components/TaskList';
+import Stats from './components/Stats/Stats';
 
 const todos = [
 	{
@@ -24,6 +25,7 @@ function App() {
 			<main>
 				<AddTask />
 				<TaskList todos={todos} />
+				<Stats />
 			</main>
 		</>
 	);

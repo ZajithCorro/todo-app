@@ -1,0 +1,31 @@
+.statsContainer {
+	background-color: var(--clr-card-bg);
+	border-radius: 0 0 0.5rem 0.5rem;
+	border-top: 0.2rem solid var(--clr-gb-6);
+	font-size: calc(var(--base-font) - 0.3rem);
+	padding: 1.9rem 2rem;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+	color: var(--clr-gb-4);
+}
+
+.statsContainer button {
+	color: inherit;
+	cursor: pointer;
+}
+
+.statsFilter {
+	display: flex;
+	justify-content: space-between;
+	font-weight: var(--fw-bold);
+	color: inherit;
+}
+
+.clearCompletedContainer {
+	display: flex;
+	justify-content: flex-end;
+}
