@@ -1,7 +1,7 @@
 import TaskItem from './TaskItem';
 import EmptyTaskList from '../EmptyTaskList';
 
-const TaskList = ({ todos, removeTodo }) => {
+const TaskList = ({ todos, removeTodo, completeTodo }) => {
 	if (todos.length === 0) {
 		return <EmptyTaskList />;
 	}
@@ -15,6 +15,7 @@ const TaskList = ({ todos, removeTodo }) => {
 					message={message}
 					completed={completed}
 					removeTodo={removeTodo}
+					completeTodo={completeTodo}
 				/>
 			))}
 		</ul>
