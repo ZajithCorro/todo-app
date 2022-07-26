@@ -3,7 +3,7 @@ import TaskItem from './TaskItem';
 
 const TaskList = ({ todos }) => {
 	return (
-		<>
+		<ul>
 			{todos.map((todo) => (
 				<TaskItem
 					key={uuidv4()}
@@ -11,7 +11,7 @@ const TaskList = ({ todos }) => {
 					completed={todo.completed}
 				/>
 			))}
-		</>
+		</ul>
 	);
 };
 
