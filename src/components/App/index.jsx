@@ -21,12 +21,16 @@ function App() {
 		setTodos([...todos, newTodo]);
 	};
 
+	const removeTodo = (id) => {
+		setTodos(todos.filter((todo) => todo.id !== id));
+	};
+
 	return (
 		<>
 			<Header />
 			<main>
 				<AddTask addTodo={addTodo} />
-				<TaskList todos={todos} />
+				<TaskList todos={todos} removeTodo={removeTodo} />
 				<Stats />
 			</main>
 		</>

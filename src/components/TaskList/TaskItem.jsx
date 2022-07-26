@@ -1,6 +1,6 @@
 import styles from './TaskItem.module.css';
 
-const TaskItem = ({ message, completed }) => {
+const TaskItem = ({ id, message, completed, removeTodo }) => {
 	const classCompleted = completed ? styles.taskCompleted : '';
 
 	return (
@@ -10,7 +10,7 @@ const TaskItem = ({ message, completed }) => {
 				<span className={styles.checkBoxSpan} />
 			</div>
 			<p className={`${styles.taskItemMessage} ${classCompleted}`}>{message}</p>
-			<button className={styles.btnClear}>
+			<button className={styles.btnClear} onClick={() => removeTodo(id)}>
 				<img src="src/assets/icon-cross.svg" alt="Clear it" />
 			</button>
 		</li>

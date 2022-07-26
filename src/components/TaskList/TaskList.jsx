@@ -1,20 +1,20 @@
-import { v4 as uuidv4 } from 'uuid';
-
 import TaskItem from './TaskItem';
 import EmptyTaskList from '../EmptyTaskList';
 
-const TaskList = ({ todos }) => {
+const TaskList = ({ todos, removeTodo }) => {
 	if (todos.length === 0) {
 		return <EmptyTaskList />;
 	}
 
 	return (
 		<ul>
-			{todos.map((todo) => (
+			{todos.map(({ message, completed, id }) => (
 				<TaskItem
-					key={uuidv4()}
-					message={todo.message}
-					completed={todo.completed}
+					key={id}
+					id={id}
+					message={message}
+					completed={completed}
+					removeTodo={removeTodo}
 				/>
 			))}
 		</ul>
