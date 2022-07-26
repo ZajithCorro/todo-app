@@ -1,0 +1,8 @@
+.emptyList {
+	background-color: var(--clr-card-bg);
+	padding: 1.9rem 2rem;
+	text-align: center;
+	color: var(--clr-gb-2);
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+}
