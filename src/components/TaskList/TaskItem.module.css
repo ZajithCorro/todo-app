@@ -26,6 +26,11 @@
 	position: relative;
 }
 
+.checkBoxContainer:hover {
+	cursor: pointer;
+	border: 0.1rem solid var(--clr-primary);
+}
+
 .checkBox {
 	transform: scale(1.8);
 	opacity: 0;
