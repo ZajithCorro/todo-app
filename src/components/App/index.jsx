@@ -47,7 +47,7 @@ function App() {
 					removeTodo={removeTodo}
 					completeTodo={completeTodo}
 				/>
-				<Stats />
+				<Stats todos={todos} setTodos={setTodos} />
 			</main>
 		</>
 	);
