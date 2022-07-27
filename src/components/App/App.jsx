@@ -5,6 +5,8 @@ import AddTask from '../AddTask';
 import TaskList from '../TaskList';
 import Stats from '../Stats/Stats';
 
+import styles from './App.module.css';
+
 import BackGroundLight from '../../assets/bg-desktop-light.jpg';
 
 function App() {
@@ -40,7 +42,7 @@ function App() {
 	return (
 		<>
 			<Header />
-			<main>
+			<main className={styles.main}>
 				<AddTask addTodo={addTodo} />
 				<TaskList
 					todos={todos}
