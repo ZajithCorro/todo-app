@@ -8,6 +8,9 @@ const AddTask = ({ addTodo }) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+
+		if (todo.trim().length <= 0) return;
+
 		const newTodo = {
 			message: todo,
 			completed: false,
