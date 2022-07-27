@@ -11,6 +11,7 @@ import BackGroundLight from '../../assets/bg-desktop-light.jpg';
 
 function App() {
 	const [todos, setTodos] = useState([]);
+	const [filter, setFilter] = useState('all');
 
 	useEffect(() => {
 		document.documentElement.style.setProperty(
@@ -48,8 +49,14 @@ function App() {
 					todos={todos}
 					removeTodo={removeTodo}
 					completeTodo={completeTodo}
+					filter={filter}
 				/>
-				<Stats todos={todos} setTodos={setTodos} />
+				<Stats
+					todos={todos}
+					setTodos={setTodos}
+					filter={filter}
+					setFilter={setFilter}
+				/>
 			</main>
 		</>
 	);

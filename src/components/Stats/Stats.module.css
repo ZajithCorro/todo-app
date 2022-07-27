@@ -18,6 +18,10 @@
 	cursor: pointer;
 }
 
+.statsContainer button.activeFilter {
+	color: var(--clr-blue);
+}
+
 .statsFilter {
 	display: flex;
 	justify-content: space-between;
