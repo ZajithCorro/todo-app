@@ -7,6 +7,8 @@ import Stats from '../Stats/Stats';
 
 import styles from './App.module.css';
 
+import { TodoProvider } from '../../context/TodoContext';
+
 import BackGroundLight from '../../assets/bg-desktop-light.jpg';
 
 function App() {
@@ -43,21 +45,24 @@ function App() {
 	return (
 		<>
 			<Header />
-			<main className={styles.main}>
-				<AddTask addTodo={addTodo} />
-				<TaskList
-					todos={todos}
-					removeTodo={removeTodo}
-					completeTodo={completeTodo}
-					filter={filter}
-				/>
-				<Stats
-					todos={todos}
-					setTodos={setTodos}
-					filter={filter}
-					setFilter={setFilter}
-				/>
-			</main>
+
+			<TodoProvider>
+				<main className={styles.main}>
+					<AddTask addTodo={addTodo} />
+					<TaskList
+						todos={todos}
+						removeTodo={removeTodo}
+						completeTodo={completeTodo}
+						filter={filter}
+					/>
+					<Stats
+						todos={todos}
+						setTodos={setTodos}
+						filter={filter}
+						setFilter={setFilter}
+					/>
+				</main>
+			</TodoProvider>
 		</>
 	);
 }
