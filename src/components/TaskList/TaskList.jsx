@@ -1,7 +1,13 @@
+import { useContext } from 'react';
+
 import TaskItem from './TaskItem';
 import EmptyTaskList from '../EmptyTaskList';
 
-const TaskList = ({ todos, removeTodo, completeTodo, filter }) => {
+import { TodoContext } from '../../context/TodoContext';
+
+const TaskList = () => {
+	const { todos, removeTodo, completeTodo, filter } = useContext(TodoContext);
+
 	let data = todos;
 
 	if (filter === 'completed') {

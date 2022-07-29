@@ -22,22 +22,6 @@ function App() {
 		);
 	}, []);
 
-	const removeTodo = (id) => {
-		setTodos(todos.filter((todo) => todo.id !== id));
-	};
-
-	const completeTodo = (id) => {
-		setTodos(
-			todos.map((todo) => {
-				if (todo.id === id) {
-					return { ...todo, completed: !todo.completed };
-				}
-
-				return todo;
-			})
-		);
-	};
-
 	return (
 		<>
 			<Header />
@@ -45,12 +29,7 @@ function App() {
 			<TodoProvider>
 				<main className={styles.main}>
 					<AddTask />
-					<TaskList
-						todos={todos}
-						removeTodo={removeTodo}
-						completeTodo={completeTodo}
-						filter={filter}
-					/>
+					<TaskList />
 					<Stats
 						todos={todos}
 						setTodos={setTodos}
