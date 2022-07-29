@@ -1,11 +1,13 @@
+import { useContext } from 'react';
+
+import { TodoContext } from '../../context/TodoContext';
+
 import styles from './Stats.module.css';
 
-const Stats = ({ todos, setTodos, filter, setFilter }) => {
-	const todosLeft = todos.filter((todo) => !todo.completed).length;
+const Stats = () => {
+	const { todos, filter, setFilter, clearCompleted } = useContext(TodoContext);
 
-	const clearCompletedTodos = () => {
-		setTodos(todos.filter((todo) => !todo.completed));
-	};
+	const todosLeft = todos.filter((todo) => !todo.completed).length;
 
 	const handleFilterChange = (e) => {
 		setFilter(e.target.value);
@@ -41,7 +43,7 @@ const Stats = ({ todos, setTodos, filter, setFilter }) => {
 				</button>
 			</div>
 			<div className={styles.clearCompletedContainer}>
-				<button onClick={clearCompletedTodos}>Clear completed</button>
+				<button onClick={clearCompleted}>Clear completed</button>
 			</div>
 		</div>
 	);
