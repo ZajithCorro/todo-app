@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { v4 as uuid } from 'uuid';
+
+import { TodoContext } from '../../context/TodoContext';
 
 import styles from './AddTask.module.css';
 
-const AddTask = ({ addTodo }) => {
+const AddTask = () => {
 	const [todo, setTodo] = useState('');
+	const { addTodo } = useContext(TodoContext);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();

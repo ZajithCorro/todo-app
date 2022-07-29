@@ -22,10 +22,6 @@ function App() {
 		);
 	}, []);
 
-	const addTodo = (newTodo) => {
-		setTodos([...todos, newTodo]);
-	};
-
 	const removeTodo = (id) => {
 		setTodos(todos.filter((todo) => todo.id !== id));
 	};
@@ -48,7 +44,7 @@ function App() {
 
 			<TodoProvider>
 				<main className={styles.main}>
-					<AddTask addTodo={addTodo} />
+					<AddTask />
 					<TaskList
 						todos={todos}
 						removeTodo={removeTodo}
