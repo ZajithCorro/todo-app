@@ -56,6 +56,9 @@
 .taskItemMessage {
 	flex: 1;
 	color: var(--clr-gb-2);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .taskCompleted {

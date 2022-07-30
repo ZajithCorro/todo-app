@@ -24,7 +24,12 @@ const TaskItem = ({ id, message, completed, removeTodo, completeTodo }) => {
 				/>
 				<span className={styles.checkBoxSpan} />
 			</div>
-			<p className={`${styles.taskItemMessage} ${classCompleted}`}>{message}</p>
+			<p
+				className={`${styles.taskItemMessage} ${classCompleted}`}
+				title={message}
+			>
+				{message}
+			</p>
 			<button className={styles.btnClear} onClick={() => removeTodo(id)}>
 				<img src={IconCross} alt="Clear it" />
 			</button>
