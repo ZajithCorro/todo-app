@@ -3,7 +3,6 @@
 	--base-font: 1.6rem;
 	--fw-normal: 400;
 	--fw-bold: 700;
-	--img-bg: url('./assets/bg-desktop-dark.jpg');
 	--clr-primary: hsl(0, 0%, 98%);
 	--clr-white: hsl(0, 0%, 100%);
 	--clr-page-bg: hsl(235, 21%, 11%);
@@ -17,7 +16,13 @@
 	--clr-gb-4: hsl(237, 12%, 36%);
 	--clr-gb-5: hsl(233, 14%, 35%);
 	--clr-gb-6: hsl(235, 19%, 24%);
+
 	--clr-box-shadow: hsl(0, 0%, 0%, 0.1);
+
+	--img-bg-dark: url('./assets/bg-desktop-dark.jpg');
+	--img-bg-light: url('./assets/bg-desktop-light.jpg');
+	--img-bg-mobile-dark: url('./assets/bg-mobile-dark.jpg');
+	--img-bg-mobile-light: url('./assets/bg-mobile-light.jpg');
 }
 
 * {
@@ -45,8 +50,12 @@ img {
 }
 
 body {
+	--background-image: var(--img-bg-mobile-light);
+	--background-color: var(--clr-white);
+
 	font: var(--fw-normal) var(--base-font) var(--ff-sans);
-	background: var(--clr-page-bg) var(--img-bg) no-repeat 0% 0% / 100vw 30rem;
+	background: var(--background-color) var(--background-image) no-repeat 0% 0% /
+		100vw 30rem;
 	padding-top: 8rem;
 	width: min(85%, 54rem);
 	margin: auto;
@@ -71,4 +80,19 @@ button {
 
 .d-none {
 	display: none;
+}
+
+.dark body {
+	--background-color: var(--clr-page-bg);
+	--background-image: var(--img-bg-mobile-dark);
+}
+
+@media screen and (min-width: 550px) {
+	body {
+		--background-image: var(--img-bg-light);
+	}
+
+	.dark body {
+		--background-image: var(--img-bg-dark);
+	}
 }
